@@ -1,4 +1,4 @@
-﻿//============== BT lý thuyết ==============
+//============== BT lý thuyết ==============
 //1. trình bày đường dẫn tương đối, và đường dẫn tuyệt đối.
 // 
 // Đường dẫn tương đối là đường dẫn vào folder của ổ cứng của người lập trình và chỉ người lập trình đó dùng được 
@@ -65,7 +65,7 @@ void lv1(int a[], int &n)
 	ifstream file;
 	// khai báo một biến file name is file;
 	
-	file.open("C:\\Users\\Admin\\Downloads\\STM\\input.txt", ios_base::in);
+	file.open("input.txt", ios_base::in);
 	// mở file lên và chỉ cho phép đọc
 	if (file.fail() == true) // hàm trả về true nếu k mở được file 
 	{
@@ -81,7 +81,7 @@ void lv1(int a[], int &n)
 	// =============Ghi file ==================
 	int Max = max(a, n);
 	ofstream outfile;
-	outfile.open("C:\\Users\\Admin\\Downloads\\STM\\output.txt", ios :: out);
+	outfile.open("output.txt", ios :: out);
 	outfile << Max << endl;
 }
 int max(int a[], int n)
@@ -121,7 +121,7 @@ void lv2(int a[], int &n)
 	ifstream file;
 	// khai báo một biến file name is file;
 
-	file.open("C:\\Users\\Admin\\Downloads\\STM\\input.txt", ios_base::in);
+	file.open("inputlv2.txt", ios_base::in);
 	// mở file lên và chỉ cho phép đọc
 	if (file.fail() == true) // hàm trả về true nếu k mở được file 
 	{
@@ -137,7 +137,7 @@ void lv2(int a[], int &n)
 	// =============Ghi file ==================
 	int Max = max(a, n);
 	ofstream outfile;
-	outfile.open("C:\\Users\\Admin\\Downloads\\STM\\output.txt", ios::out);
+	outfile.open("outputlv2.txt", ios::out);
 	bool kiemtra = false;
 	for (int i = 0; i < n; i++)
 	{
@@ -160,7 +160,7 @@ void lv3(int a[], int& n)
 	ifstream file;
 	// khai báo một biến file name is file;
 
-	file.open("C:\\Users\\Admin\\Downloads\\STM\\input.txt", ios_base::in);
+	file.open("inputlv3.txt", ios_base::in);
 	// mở file lên và chỉ cho phép đọc
 	if (file.fail() == true) // hàm trả về true nếu k mở được file 
 	{
@@ -177,7 +177,7 @@ void lv3(int a[], int& n)
 	// =============Ghi file ==================
 	int Max = max(a, n);
 	ofstream outfile;
-	outfile.open("C:\\Users\\Admin\\Downloads\\STM\\output.txt", ios::out);
+	outfile.open("outputlv3.txt", ios::out);
 	int Ucln = ucln(a, n);
 	outfile << "Ucln:" << Ucln << endl;
 	int Bcnn = bcnn(a,n);
@@ -188,7 +188,6 @@ int ucln(int a[], int n)
 {
 	int Min = min(a, n);
 	int temp = 0;
-	cout << "Gia tri n : " << n;
 	for (int i = Min; i > 0; i--)
 	{
 		for (int j = 0; j < n; j++)
